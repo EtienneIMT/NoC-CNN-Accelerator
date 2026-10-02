@@ -27,5 +27,10 @@ ENV LD_LIBRARY_PATH=$SYSTEMC_HOME/lib-linux64:$LD_LIBRARY_PATH
 WORKDIR /app
 COPY . /app/
 
+# Create symlinks to avoid duplicating the 550MB data folder
+RUN rm -rf src/baseline/data src/optimized/data && \
+    ln -s /app/data src/baseline/data && \
+    ln -s /app/data src/optimized/data
+
 # The default command will be to compile the baseline as a test
-CMD ["/bin/bash", "-c", "cd src/baseline && make cat"]
+CMD ["/bin/bash", "-c", "cd src/baseline && make"]

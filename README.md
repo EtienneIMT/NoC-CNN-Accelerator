@@ -115,7 +115,16 @@ cd NoC-CNN-Accelerator
 docker build -t noc-cnn .
 ```
 
-### 3. Run the Simulations
+### 3. Download the Dataset (Required for Simulation)
+Since the pre-trained AlexNet weights and test images are large (~550MB), they are provided as a GitHub Release asset.
+Download `data.zip` from the [Releases page](https://github.com/EtienneIMT/NoC-CNN-Accelerator/releases) and extract it into the root of the repository:
+```bash
+# Example if using wget
+wget https://github.com/EtienneIMT/NoC-CNN-Accelerator/releases/latest/download/data.zip
+unzip data.zip
+```
+
+### 4. Run the Simulations
 You can execute either the baseline or the optimized architecture. The container will automatically compile the codebase and run the inference simulation on a test image (e.g., `cat` or `dog`).
 
 **Run Baseline:**

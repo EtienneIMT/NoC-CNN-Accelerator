@@ -11,3 +11,6 @@ run
 # IDEs
 .vscode/
 .idea/
+
+# Data files
+data/

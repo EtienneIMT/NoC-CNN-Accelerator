@@ -22,8 +22,8 @@ jobs:
     - name: Build Docker Image
       run: docker build -t noc-cnn-accelerator .
       
-    - name: Test Baseline Design
-      run: docker run --rm noc-cnn-accelerator bash -c "cd src/baseline && make cat"
+    - name: Build Baseline Design
+      run: docker run --rm noc-cnn-accelerator bash -c "cd src/baseline && make"
       
-    - name: Test Optimized Design
-      run: docker run --rm noc-cnn-accelerator bash -c "cd src/optimized && make cat"
+    - name: Build Optimized Design
+      run: docker run --rm noc-cnn-accelerator bash -c "cd src/optimized && make"
