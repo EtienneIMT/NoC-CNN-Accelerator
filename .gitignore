@@ -1,0 +1,13 @@
+# Build artifacts
+run
+*.o
+*.so
+*.a
+
+# OS generated files
+.DS_Store
+.nfs*
+
+# IDEs
+.vscode/
+.idea/

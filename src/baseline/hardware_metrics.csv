@@ -1,0 +1,3 @@
+Architecture,Image,Total_Cycles,Global_SRAM_KB,Local_SRAM_Max_MB,DRAM_Access_MB,PE_Utilization_Pct,Total_MAC_Ops
+Baseline,cat.txt,1.2428e+11,0.00390625,144,233.183,0.0718325,714188480
+Baseline,dog.txt,1.2428e+11,0.00390625,144,233.183,0.0718325,714188480
